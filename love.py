@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 import random
+import os
+from keep_alive import keep_alive
 TOKEN = os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.default()
@@ -123,4 +125,5 @@ async def thinh(ctx):
     await ctx.send(embed=embed)
 
 # ======================== CHẠY BOT ========================
+keep_alive()
 bot.run(TOKEN)
